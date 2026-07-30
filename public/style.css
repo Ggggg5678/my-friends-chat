@@ -1,0 +1,92 @@
+/* Настройки для всей страницы браузера */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Растягиваем на 100% высоты экрана */
+    width: 100vw;  /* Растягиваем на 100% ширины экрана */
+    overflow: hidden;
+}
+
+/* Главный контейнер чата — теперь он занимает весь экран */
+#chat-container {
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Окно с сообщениями — занимает всё свободное место */
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    flex-grow: 1;      /* Заставляет блок растягиваться вверх */
+    overflow-y: auto;  /* Включает прокрутку, если сообщений много */
+    background: #e5ddd5; /* Приятный фоновый цвет для чата */
+}
+
+/* Стили для каждого отдельного сообщения */
+#messages li {
+    padding: 10px 15px;
+    background: white;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    max-width: 60%;    /* Чтобы длинные сообщения не растягивались во весь экран */
+    word-wrap: break-word; /* Перенос длинных слов */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    font-size: 16px;
+}
+
+/* Нижняя панель с полями ввода и кнопкой */
+#form {
+    display: flex;
+    padding: 15px 20px;
+    background: #f0f0f0;
+    border-top: 1px solid #ddd;
+    align-items: center;
+}
+
+/* Поле для ввода имени */
+#username {
+    width: 150px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Поле для ввода самого текста */
+#input {
+    flex-grow: 1;      /* Растягивает поле ввода на всю оставшуюся ширину */
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Кнопка отправки */
+button {
+    background: #0084ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #0066cc;
+}

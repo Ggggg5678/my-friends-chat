@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Наш Секретный Чат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="chat-container">
+        <ul id="messages"></ul>
+        <form id="form">
+            <input id="username" type="text" placeholder="Ваше имя..." required autocomplete="off">
+            <input id="input" type="text" placeholder="Введите сообщение..." required autocomplete="off">
+            <button>Отправить</button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
